@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>User Intserface - SGS Documents</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "User Intserface";
+        var mkdocs_page_input_path = "user_interface.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/R.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SGS Documents
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../home/">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and deploy</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Documents</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../qucik_start/">Quickstart guides</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User guide</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">User Intserface</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#main-window">Main Window</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#settings">Settings</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#color-theme">Color Theme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#theme-mode">Theme Mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#data-cache-and-setting-cache">Data Cache and Setting Cache</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#server-and-data-management">Server and data management</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#server-list">Server list</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#database-connection">Database connection</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adding-species">Adding species</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adding-tracks">Adding tracks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#track-management">Track management</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#track-list">Track list</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#track-theme">Track theme</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#track-menu">Track menu</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#track-information">Track information</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#browser-your-data">Browser your data</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#species-list">Species list</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#track-view-operations">Track view operations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sharing-session">Sharing session</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-compare-mode">The compare mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#single-cell-browser">Single cell browser</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#single-cell-data-list">Single cell data list</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#single-cell-browser-interface">Single cell browser interface</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#marker-table">Marker table</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scmulticompare">scMultiCompare</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rstudio-server">Rstudio Server</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Viewing_NGS/">Viewing NGS data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Viewing_singlecell/">Viewing single cell data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../R_server/">Guide of R server</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../demos/">Demos</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SGS Documents</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Documents &raquo;</li>
+          <li>User guide &raquo;</li><li>User Intserface</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="user-interface">User interface</h1>
+<h2 id="main-window">Main Window</h2>
+<p>The following figure shows the main interface of SGS browser.
+<img alt="the mian interface of SGS browser" src="/pictures/4_1.2.png" /></p>
+<h2 id="settings">Settings</h2>
+<p>The Settings menu controls global settings of the browser.</p>
+<h3 id="color-theme">Color Theme</h3>
+<p>Color Theme used to setting the software interface theme color.
+<img alt="Color Theme" src="/pictures/4_2.png" /></p>
+<h3 id="theme-mode">Theme Mode</h3>
+<p>We offered two theme mode:Light mode, Dark mode.
+<img alt="Theme Mode" src="/pictures/4_3.png" /></p>
+<h3 id="data-cache-and-setting-cache">Data Cache and Setting Cache</h3>
+<p>Data cache and setting cache used to clear data and set cache respectively.
+<img alt="Data Cache and Setting Cache" src="/pictures/4_4.png" /></p>
+<h2 id="server-and-data-management">Server and data management</h2>
+<p>Users can deploy SGS services through the shortcut option <b><font color=#3A5FCD>New SGS server</font></b> or <b><font color=#3A5FCD>Home</font></b> --&gt; <b><font color=#3A5FCD>New SGS server</font></b>. The detailed steps of deployment, please refer to:<a href="http://127.0.0.1:8000/installation/" target="_blank">Installation and deploy</a> .</p>
+<h3 id="server-list">Server list</h3>
+<p>The server list menu bar mainly displays the currently added SGS service url. By clicking the edit button option (2), users can change the url address and name; by clicking URL setting (2), the URL can be deleted or connected to the relevant data management center; finally, users can also able to re-add new SGS service URLs.</p>
+<p><img alt="Server managment" src="/pictures/4_5.1.png" /></p>
+<h3 id="database-connection">Database connection</h3>
+<p>Clicking the data management button, we will enter the database longin interface. By clicking "Log to new server", we can switch the service IP and enter the data list interface to delete or add track data.
+<img alt="Data Cache and Setting Cache" src="/pictures/4_5.png" /></p>
+<h2 id="adding-species">Adding species</h2>
+<p>To add a new species, you need to click the "add species" botton. Then, You should fill in the corresponding species name and description information, and choose a fasta file in the data dir.
+<img alt="Adding species" src="/pictures/4_6.png" /></p>
+<h2 id="adding-tracks">Adding tracks</h2>
+<p>SGS support three types of tracks, namely Genome、Transcript(single cell transcipt) and ATAC(single cell atac). To add tracks, you first need to choose track types, then load files. Users can add single file or multi files at the same time.
+<img alt="Adding tracks" src="/pictures/4_7.png" /></p>
+<p>The following file formats are supported:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Formats</th>
+<th align="center">GFF</th>
+<th align="center">VCF</th>
+<th align="center">BAM</th>
+<th align="center">BIGWIG</th>
+<th align="center">BED</th>
+<th align="center">melthyC</th>
+<th align="center">biginteract</th>
+<th align="center">BedGraph</th>
+<th align="center">Longrange</th>
+<th align="center">Seurat object</th>
+<th align="center">Signac object</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Track types</td>
+<td align="center">Genome</td>
+<td align="center">Genome</td>
+<td align="center">Genome</td>
+<td align="center">Genome</td>
+<td align="center">Genome</td>
+<td align="center">Genome</td>
+<td align="center">Genome</td>
+<td align="center">Genome</td>
+<td align="center">Genome</td>
+<td align="center">Transcript</td>
+<td align="center">ATAC</td>
+</tr>
+</tbody>
+</table>
+<h2 id="track-management">Track management</h2>
+<h3 id="track-list">Track list</h3>
+<p>Track list mainly display added tracks. Users can search track by name(1)、select track、 sort tracks by track data formats(2) or change track orders by dragging track order icon(3).
+<img alt="Track list" src="/pictures/4_8.png" /></p>
+<h3 id="track-theme">Track theme</h3>
+<p>Users can import or ceate new track feature style(1). Track theme setting allows user to customize track feature display shape, color, height and font size for different tracks(2-3).
+<img alt="Track theme" src="/pictures/4_9.png" /></p>
+<h3 id="track-menu">Track menu</h3>
+<p>Users can access track-specific function by using the track menu, which is accessible from the track selecter itself. Some functions are track-specific, but more function are basic options like <b><font color=#3A5FCD>Track Height</font></b>, <b><font color=#3A5FCD>Track Color</font></b>, <b><font color=#3A5FCD>Rename Track</font></b> are available from the track menu on the track selector.
+<img alt="Track theme" src="/pictures/4_10.png" /></p>
+<h3 id="track-information">Track information</h3>
+<p>Users can view the detailed description of the feature on the right by clicking the track feature.
+<img alt="Track information" src="/pictures/4_11.png" /></p>
+<h2 id="browser-your-data">Browser your data</h2>
+<p>The top navigation menu controls most of the browser functionality. From left to right are compare mode, species and assembly information, genomic region locator, zoom in/out tools, min/max scale, region selection, undo/redo and share session:
+<img alt="Top memu bar" src="/pictures/4_11.1.png" /></p>
+<h3 id="species-list">Species list</h3>
+<p>User can view omics data added in different species by clicking on species selection button.
+<img alt="Top memu bar" src="/pictures/4_11.1.2.png" /></p>
+<h3 id="track-view-operations">Track view operations</h3>
+<h4 id="movezoomminsalemaxscale-tools">Move/Zoom/minsale/maxscale tools</h4>
+<p>User can change the current region by draging the mouse right or left or by click the left or right <b><font color=#3A5FCD>move</font></b> button. <b><font color=#3A5FCD>Zoom</font></b> mode allows the user to zoom in or zoom out on a specific region within the cuurent view using the mouse.  Besides, <b><font color=#3A5FCD>Min/Max scale</font></b> mode allows user to change the view to min or max zoom scale.</p>
+<p><img alt="Move/Zoom tools" src="/pictures/4_11.1.3.png" /></p>
+<h4 id="region-higlight-tools">Region higlight tools</h4>
+<p>Region higlight function allows user to higlight the region they select.</p>
+<p><img alt="Region higlight" src="/pictures/4_11.1.4.png" /></p>
+<h4 id="redoundo-tools">Redo/Undo tools</h4>
+<p>For instance if you accidently moved to another region and forgot what you were looking at before you can click the <b><font color=#3A5FCD>Undo</font></b> button to go back. Clicking the <b><font color=#3A5FCD>Redo</font></b> button allows you to go forward to the step before you clicked <b><font color=#3A5FCD>Undo</font></b>.</p>
+<p><img alt="Redo/Undo tools" src="/pictures/4_11.1.5.png" /></p>
+<h4 id="search-tools">Search tools</h4>
+<h5 id="search-by-region">Search by region</h5>
+<p>Users can find intervals of interest by entering genomic coordinates in format of <b><font color=#3A5FCD>ctgA:23364-25651</font></b>.</p>
+<p><img alt="Search by region" src="/pictures/4_11.1.6.png" /></p>
+<h5 id="search-by-name">Search by name</h5>
+<p>Enter the gene name, you can quickly jump to the position of the gene.</p>
+<p><img alt="Search by name" src="/pictures/4_11.1.7.png" /></p>
+<h2 id="sharing-session">Sharing session</h2>
+<p>SGS browser allows users to share session with other users. Just clicking on the share session botton in the sidebar or the top navigation menu, you can copy and send the URL to other user.
+<img alt="Sharing session" src="/pictures/4_7.1.png" /></p>
+<h2 id="the-compare-mode">The compare mode</h2>
+<p>SGS provides the compare function to compare the differences in the distribution of genomic data on different chromosomes of the same species.
+<img alt="Compare mode" src="/pictures/4_11.1.1.png" /></p>
+<p>Users can switch to a different chromosome for comparison via the position manipulation box at the top or botton. By hovering over a chromosome, users can zoom in/zoom out the current visualization area through the scroll wheel, and switch the chromosome area by dragging left and right.</p>
+<h2 id="single-cell-browser">Single cell browser</h2>
+<h3 id="single-cell-data-list">Single cell data list</h3>
+<p>Clicking on the single cell browser, we can view the single cell datasets that have been added so far, and by selecting one of the datasets, we can view them in the single cell browser.
+<img alt="Single cell data list" src="/pictures/4_12.png" /></p>
+<h3 id="single-cell-browser-interface">Single cell browser interface</h3>
+<p>The single cell browser main display the cell annotated scatterplot derived from UMAP, tSNE, or some other dimensionality reduction method. The image below highlights some of the main features of this core visualization:</p>
+<p><img alt="Single cell data list" src="/pictures/4_13.png" /></p>
+<p>The toolbox is on the top of the single cellbrowser window and contains tools that perform the functions  list in the table below:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Icon</th>
+<th align="center">Function Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="save picture" src="/pictures/4_13.1.png" /></td>
+<td align="center">Used to save the currently single cell view as a jpg image</td>
+</tr>
+<tr>
+<td align="center"><img alt="reset view" src="/pictures/4_13.2.png" /></td>
+<td align="center">Used to reset the single-cell view to its initial state</td>
+</tr>
+<tr>
+<td align="center"><img alt="change matrix" src="/pictures/4_13.3.png" /></td>
+<td align="center">When uploading multiple types of matrix files, it is used to switch between different matrixes</td>
+</tr>
+<tr>
+<td align="center"><img alt="change reduction" src="/pictures/4_13.3.1.png" /></td>
+<td align="center">Used to change cell embedding, tSNE/UMAP</td>
+</tr>
+<tr>
+<td align="center"><img alt="change color" src="/pictures/4_13.4.png" /></td>
+<td align="center">Used to change the cell cluster color according to different cell annotation methods</td>
+</tr>
+<tr>
+<td align="center"><img alt="change label" src="/pictures/4_13.5.png" /></td>
+<td align="center">Used to change cell annotation label</td>
+</tr>
+<tr>
+<td align="center"><img alt="show legend" src="/pictures/4_13.6.png" /></td>
+<td align="center">Used to display the currently viewed cell annotation legend</td>
+</tr>
+<tr>
+<td align="center"><img alt="show axis" src="/pictures/4_13.7.png" /></td>
+<td align="center">Used to display cell reduction coordinate system</td>
+</tr>
+<tr>
+<td align="center"><img alt="dot setting" src="/pictures/4_13.8.png" /></td>
+<td align="center">Used to adjust the size of the points in the cluster graph</td>
+</tr>
+<tr>
+<td align="center"><img alt="rstudio server" src="/pictures/4_13.9.png" /></td>
+<td align="center">Used to enter Rstudio server</td>
+</tr>
+<tr>
+<td align="center"><img alt="change layout" src="/pictures/4_13.10.png" /></td>
+<td align="center">It is used to change the layout of the single-cell window, mainly providing three layout modes: left, right and bottom</td>
+</tr>
+<tr>
+<td align="center"><img alt="marker table" src="/pictures/4_13.11.png" /></td>
+<td align="center">View marker table</td>
+</tr>
+</tbody>
+</table>
+<p>Users can view different matrix such as: peak matrix, motif matrix or gene exp matrix just by clicking on the <img alt="change matrix" src="/pictures/4_13.3.png" /> boutton. Besides, when multi reduction data have upload, users can switch to different reduction plots with <img alt="change reduction" src="/pictures/4_13.3.1.png" /> button. Users will gain the cell anotation of the cell cluster when they use the <img alt="change label" src="/pictures/4_13.5.png" /> option. Fourthermore, with the opening of <img alt="show legend" src="/pictures/4_13.6.png" /> option, users can also change the color of the cell cluster or hide the cell clster by clikcing the color box or cluster name respectively.</p>
+<h3 id="marker-table">Marker table</h3>
+<p>We provide graphs and charts to display single-cell markers.
+<img alt="Marker table" src="/pictures/4_14.png" /></p>
+<p><b><font color=#3A5FCD>(1)</font></b> By clicking on the marker gene, the single-cell browser displays the expression of the marker in different cell types, and if the genome-related data such as gff is uploaded, the genome browser will quickly jump to the gene position.
+<img alt="Marker table" src="/pictures/4_15.png" /></p>
+<p><b><font color=#3A5FCD>(2)</font></b> By dragging left and right to view the complete marker table information, and view more markers by pulling up the table or clicking the page turning option; (3) By clicking the graphics icon, you can view the marker gene expression scatterplot.
+<img alt="Marker table" src="/pictures/4_16.png" /></p>
+<h3 id="scmulticompare">scMultiCompare</h3>
+<p>It is critical to view multiple markers simultaneously in  single-cell researches. By selecting multiple markers in the single-cell marker table, click scMultiCompare to enter the single-cell multi-marker compare module.
+<img alt="scMultiCompare" src="/pictures/4_17.png" /></p>
+<ul>
+<li>by cliking on <b><font color=#3A5FCD>change view mode</font></b>, switch the horizontal or vertical graphics display mode.</li>
+<li>by cliking on <b><font color=#3A5FCD>change view type</font></b>, you can switch between multiple marker display modes, mainly: compare and heatmap.</li>
+<li><b><font color=#3A5FCD>show label</font></b>: used to display the plot type label.</li>
+<li>by cliking on <b><font color=#3A5FCD>choose plot type</font></b>, users can choose the drawing type, mainly including cell.  clustering plot, box plot, violin plot, Motif Logo maps, peak coverage plot.</li>
+</ul>
+<h3 id="rstudio-server">Rstudio Server</h3>
+<p>Users can load the single cell analysis object directly from R into SGS single-cell browser by clicking the 
+<img alt="Rstudio Server" src="/pictures/4_18.1.png" /> button. For detailed manual, please refer to this link：<a href="http://127.0.0.1:8000/R_server/" target="_blank">Cudie of R server</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../qucik_start/" class="btn btn-neutral float-left" title="Quickstart guides"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Viewing_NGS/" class="btn btn-neutral float-right" title="Viewing NGS data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../qucik_start/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Viewing_NGS/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
