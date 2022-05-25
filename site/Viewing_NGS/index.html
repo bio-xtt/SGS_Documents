@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Viewing NGS data - SGS Documents</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Viewing NGS data";
+        var mkdocs_page_input_path = "Viewing_NGS.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/R.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SGS Documents
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../home/">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and deploy</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Documents</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../qucik_start/">Quickstart guides</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User guide</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../user_interface/">User Intserface</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Viewing NGS data</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#gff-track">GFF track</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vcf-track">VCF track</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bam-track">Bam track</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#bam-coverage-track">Bam coverage track</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#bam-alignment-track">Bam alignment track</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bigwig-track">BigWig Track</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bedgraph-track">Bedgraph Track</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bed-track">Bed Track</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#melthyc-track">MelthyC Track</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chromatin-interaction-track">Chromatin interaction Track</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#hic">Hic</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#longrange-and-biginteract">Longrange and biginteract</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Viewing_singlecell/">Viewing single cell data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../R_server/">Guide of R server</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../demos/">Demos</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SGS Documents</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Documents &raquo;</li>
+          <li>User guide &raquo;</li><li>Viewing NGS data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="view-ngs-data">View NGS data</h1>
+<h2 id="gff-track">GFF track</h2>
+<p>GFF file is a \t-delimited, 9-column plain text file. It mainly describes the interval information of various features on the genome, including chromosomes, genes, transcripts etc.</p>
+<pre><code class="language-R">NC_000001.11    BestRefSeq    pseudogene    11874    14409    .    +    .    ID=gene0;Dbxref=GeneID:100287102,HGNC:HGNC:37102;Name=DDX11L1;description=DEAD/H-box helicase 11 like 1;gbkey=Gene;gene=DDX11L1;gene_biotype=transcribed_pseudogene;pseudo=true
+NC_000001.11    BestRefSeq    transcript    11874    14409    .    +    .    ID=rna0;Parent=gene0;Dbxref=GeneID:100287102,Genbank:NR_046018.2,HGNC:HGNC:37102;Name=NR_046018.2;gbkey=misc_RNA;gene=DDX11L1;product=DEAD/H-box helicase 11 like 1;transcript_id=NR_046018.2
+NC_000001.11    BestRefSeq    exon    11874    12227    .    +    .    ID=id1;Parent=rna0;Dbxref=GeneID:100287102,Genbank:NR_046018.2,HGNC:HGNC:37102;gbkey=misc_RNA;gene=DDX11L1;product=DEAD/H-box helicase 11 like 1;transcript_id=NR_046018.2
+NC_000001.11    BestRefSeq    exon    12613    12721    .    +    .    ID=id2;Parent=rna0;Dbxref=GeneID:100287102,Genbank:NR_046018.2,HGNC:HGNC:37102;gbkey=misc_RNA;gene=DDX11L1;product=DEAD/H-box helicase 11 like 1;transcript_id=NR_046018.2
+NC_000001.11    BestRefSeq    exon    13221    14409    .    +    .    ID=id3;Parent=rna0;Dbxref=GeneID:100287102,Genbank:NR_046018.2,HGNC:HGNC:37102;gbkey=misc_RNA;gene=DDX11L1;product=DEAD/H-box helicase 11 like 1;transcript_id=NR_046018.2
+</code></pre>
+<p>The SGS genome browser visualizes genes and their corresponding transcripts structures by grouping. 
+<img alt="GFF track" src="/pictures/5_1.png" /></p>
+<p>Users can adjust the style of GFF feature in track theme to view their interesting structures such as CDS, EXON, UTR.
+<img alt="GFF track" src="/pictures/5_1.1.png" /></p>
+<h2 id="vcf-track">VCF track</h2>
+<p>VCF is the abbreviation of Variant Call Format(<a href="http://genome.ucsc.edu/FAQ/FAQformat.html#format6.1" target="_blank">UCSC vcf format</a>), which is a text file specially used to store gene sequence mutation information, including single base mutation SNV, single nucleotide polymorphism SNP, InDel, copy number variation CNV and structure Variant SV, etc.
+The beginning of the VCF file is the overall comment information, starting with ##, each line of the vcf body is a record, the fixed column has 9 columns, and the tenth column after that, they are:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Column</th>
+<th align="left">Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">First column</td>
+<td align="left">CHROM: chromosome number;</td>
+</tr>
+<tr>
+<td align="center">Second column</td>
+<td align="left">POS: position on chromosome;</td>
+</tr>
+<tr>
+<td align="center">Third column</td>
+<td align="left">ID: mutation name;</td>
+</tr>
+<tr>
+<td align="center">Fourth column</td>
+<td align="left">REF: reference genome base type;</td>
+</tr>
+<tr>
+<td align="center">Fifth column</td>
+<td align="left">ALT: variant base type;</td>
+</tr>
+<tr>
+<td align="center">Sixth column</td>
+<td align="left">QUAL: the quality value of variant detection, the higher the more reliable</td>
+</tr>
+<tr>
+<td align="center">Seventh column</td>
+<td align="left">FILTER: the column that marks the filtering result; the one that passes the quality control filtering standard is marked as 'PASS';</td>
+</tr>
+<tr>
+<td align="center">Eighth column</td>
+<td align="left">INFO: additional information column;</td>
+</tr>
+<tr>
+<td align="center">Ninth column</td>
+<td align="left">FORMAT: the description column of the following information;</td>
+</tr>
+<tr>
+<td align="center">Tenth column</td>
+<td align="left">sample information: GT=genotype, AD=number of bases supported, DP=sum of sequencing depth, PL=probability of genotype after normalization, GQ=quality value of genotype called by PL;</td>
+</tr>
+</tbody>
+</table>
+<!-- ‘:----:’ 表示居中显示； ‘:------’ 表示靠左显示 -->
+
+<pre><code class="language-R">##fileformat=VCFv4.0
+##fileDate=20090805
+##source=myImputationProgramV3.1
+##reference=1000GenomesPilot-NCBI36
+##phasing=partial
+##INFO=&lt;ID=NS,Number=1,Type=Integer,Description=&quot;Number of Samples With Data&quot;&gt;
+##INFO=&lt;ID=DP,Number=1,Type=Integer,Description=&quot;Total Depth&quot;&gt;
+##INFO=&lt;ID=H2,Number=0,Type=Flag,Description=&quot;HapMap2 membership&quot;&gt;
+##FILTER=&lt;ID=q10,Description=&quot;Quality below 10&quot;&gt;
+##FORMAT=&lt;ID=GT,Number=1,Type=String,Description=&quot;Genotype&quot;&gt;
+##FORMAT=&lt;ID=HQ,Number=2,Type=Integer,Description=&quot;Haplotype Quality&quot;&gt;
+#CHROM POS     ID        REF ALT    QUAL FILTER INFO                              FORMAT      NA00001        NA00002        NA00003
+20     14370   rs6054257 G      A       29   PASS   NS=3;DP=14;AF=0.5;DB;H2           GT:GQ:DP:HQ 0|0:48:1:51,51 1|0:48:8:51,51 1/1:43:5:.,.
+20     17330   .         T      A       3    q10    NS=3;DP=11;AF=0.017               GT:GQ:DP:HQ 0|0:49:3:58,50 0|1:3:5:65,3   0/0:41:3
+20     1110696 rs6040355 A      G,T     67   PASS   NS=2;DP=10;AF=0.333,0.667;AA=T;DB GT:GQ:DP:HQ 1|2:21:6:23,27 2|1:2:0:18,2   2/2:35:4
+20     1230237 .         T      .       47   PASS   NS=3;DP=13;AA=T                   GT:GQ:DP:HQ 0|0:54:7:56,60 0|0:48:4:51,51 0/0:61:2
+20     1234567 microsat1 GTCT   G,GTACT 50   PASS   NS=3;DP=9;AA=G                    GT:GQ:DP    0/1:35:4       0/2:17:2       1/1:40:3
+</code></pre>
+<p>The display effect of SGS is as follows: SGS not only displays the variation position and variation type of the variation site, but also displays the variation information of each sample, including statistical classification of sample variation information, genotype information (homozygous, heterozygous, non-variant), variation Details such as number, variant score, etc.
+<img alt="Color Theme" src="/pictures/5_2.2.png" />
+<img alt="Color Theme" src="/pictures/5_2.1.png" /></p>
+<h2 id="bam-track">Bam track</h2>
+<p>The BAM file is the binary format of the SAM file, which mainly records the sequence alignment. The SGS Genome Browser supports direct visualization of index-free bam files. The bam track visualization in SGS is mainly composed of two parts, one is bam coverage sub track and the other is bam alignment sub track.
+<img alt="BAM track" src="/pictures/5_3.png" /></p>
+<h3 id="bam-coverage-track">Bam coverage track</h3>
+<p>BAM coverage mainly displays the number of aligned reads at each position on the genome, the number of A, T, C, G mutation sites and the statistics of reads strands.
+<img alt="BAM track" src="/pictures/5_3.1.png" /></p>
+<h3 id="bam-alignment-track">Bam alignment track</h3>
+<p><img alt="indels" src="/pictures/5_3.5.png" /></p>
+<p>The BAM alignment track mainly displays sequence alignments, such as mutation sites <img alt="mutation sites" src="/pictures/5_3.2.png" /> , indels <img alt="indels" src="/pictures/5_3.3.png" /> , gap regions <img alt="gap" src="/pictures/5_3.4.png" /> , soft and hard clipping.</p>
+<h2 id="bigwig-track">BigWig Track</h2>
+<p>BigWig files are created from wiggle (wig) type files using the wigToBigWig program. bigWig files are indexed binary formats(<a href="http://genome.ucsc.edu/FAQ/FAQformat.html#format6.1" target="_blank">UCSC bigwig format</a>). The display performance of bigWig files is much faster than regular wiggle files when dealing with large datasets. Note: Wiggle data must be contiguous and consist of elements of equal size. If your data is sparse or contains elements of different sizes, use bedGraph format instead of wiggle format. If you have a very large bedGraph dataset, you can convert it to bigWig format using the bedGraphToBigWig program.</p>
+<p>The SGS display effect is as follows, SGS presents dense, continuous data and graphs this data, with peaks representing scores at different locations. SGS can use the track tag to select the normalization method of data to achieve the research purpose of displaying different data, At the same time, users can also choose different image display methods for different data. For example, track1 and track in the following figure have selected different normalization methods way and type of graph.
+<img alt="Color Theme" src="/pictures/5_4.1.png" /></p>
+<h2 id="bedgraph-track">Bedgraph Track</h2>
+<p>Bedgraph is a \t-delimited, 4-column plain text file. It mainly used to records continuous data such as transcriptome or chip analysis data. The first column is <b><font color=#3A5FCD>chromosome</font></b>, second column is <b><font color=#3A5FCD>start position</font></b>, third column is <b><font color=#3A5FCD>end position</font></b> and the last column is third column is <b><font color=#3A5FCD>dataValue</font></b>. </p>
+<pre><code class="language-R">chr19   49302000    49302300    -1.0
+chr19   49302300    49302600    -0.75
+chr19   49302600    49302900    -0.50
+chr19   49302900    49303200    -0.25
+chr19   49303200    49303500    0.0
+chr19   49303500    49303800    0.25
+chr19   49303800    49304100    0.50
+chr19   49304100    49304400    0.75
+chr19   49304400    49304700    1.00
+</code></pre>
+<p>Similar to the bigwig file display, the SGS genome browser also provides the following modes <img alt="bedgraph" src="/pictures/5_4.png" /> to display it visually, namely: <b><font color=#3A5FCD>bar plot</font></b>, <b><font color=#3A5FCD>line plot</font></b>, <b><font color=#3A5FCD>area chart</font></b>, <b><font color=#3A5FCD>xxxx</font></b>, <b><font color=#3A5FCD>Scatter plot</font></b>.</p>
+<h2 id="bed-track">Bed Track</h2>
+<p>A track for all bed-like files (with first column chromosome, second start and third end). If the other columns fit the requirement as defined in <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1" target="_blank">UCSC</a> additional fields can be used. For example, the 5th and 9th column can be used to change the color of intervals, the 6th column indicate the strand. By default, intervals without strand are displayed as rectangle and for intervals with strand an arrow is added at the extremity (not included in the interval). In case of BED12 format, the introns are displayed into another color. But other styles are available.</p>
+<pre><code class="language-R">chr7    127471196  127472363  Pos1  0  +  127471196  127472363  255,0,0
+chr7    127472363  127473530  Pos2  0  +  127472363  127473530  255,0,0
+chr7    127473530  127474697  Pos3  0  +  127473530  127474697  255,0,0
+chr7    127474697  127475864  Pos4  0  +  127474697  127475864  255,0,0
+chr7    127475864  127477031  Neg1  0  -  127475864  127477031  0,0,255
+chr7    127477031  127478198  Neg2  0  -  127477031  127478198  0,0,255
+chr7    127478198  127479365  Neg3  0  -  127478198  127479365  0,0,255
+chr7    127479365  127480532  Pos5  0  +  127479365  127480532  255,0,0
+chr7    127480532  127481699  Neg4  0  -  127480532  127481699  0,0,255
+</code></pre>
+<p>At a larger zoom level, the SGS genome browser provides a variety of modes to display the statistical distribution of the number of bed fearures.
+<img alt="indels" src="/pictures/5_6.png" /></p>
+<p>At a smaller zoom level, it mainly displays the bed feature structure.
+<img alt="indels" src="/pictures/5_6.1.png" /></p>
+<h2 id="melthyc-track">MelthyC Track</h2>
+<p>The methylC file is a 7-column bed file that mainly records methylation at different genomic sites. From left to right, they are：<b><font color=#3A5FCD>chromosome</font></b>, <b><font color=#3A5FCD>start position</font></b> (0-based), <b><font color=#3A5FCD>end position</font></b> (not included), <b><font color=#3A5FCD>methylation context</font></b> (CG, CHG, CHG etc.), <b><font color=#3A5FCD>methylation value</font></b>, <b><font color=#3A5FCD>strand</font></b>, and <b><font color=#3A5FCD>read depth</font></b>.</p>
+<pre><code class="language-R">chr1    10542   10543   CG      0.923   -       26
+chr1    10556   10557   CHH     0.040   -       25
+chr1    10562   10563   CG      0.941   +       17
+chr1    10563   10564   CG      0.958   -       24
+chr1    10564   10565   CHG     0.056   +       18
+chr1    10566   10567   CHG     0.045   -       22
+chr1    10570   10571   CG      0.870   +       23
+chr1    10571   10572   CG      0.913   -       23
+</code></pre>
+<p>In order to better compare different methylation types, SGS displays CHG, CHH, CG and read depth <img alt="MelthyC" src="/pictures/5_7.1.png" /> information on the same track, and the specific methylation status of a genomic site can be viewed through mouse hover.
+<img alt="MelthyC" src="/pictures/5_7.png" /></p>
+<p>In addition, the SGS genome browser also provides a split chart function to display the distribution of different methylation types separately.
+<img alt="MelthyC" src="/pictures/5_7.2.png" /></p>
+<h2 id="chromatin-interaction-track">Chromatin interaction Track</h2>
+<h3 id="hic">Hic</h3>
+<p>SGS mainly supports the visualization of .hic files, which mainly record the interaction information of different genome intervals. For specific hic data format, please refer to：<a href="https://github.com/aidenlab/juicer/wiki/Data" target="_blank">hic format</a>.</p>
+<p>We provide two modes of heat map and Arc to display the hic folder. Users can zoom to different levels to view the interaction at different resolutions, and the intensity of the interaction is displayed through the color depth. Users can view the two through the mouse hover. The interaction value of the interaction interval.</p>
+<h4 id="heatmap-mode">heatmap mode</h4>
+<p><img alt="HIC" src="/pictures/5_8.png" /></p>
+<h4 id="arc-mode">Arc mode</h4>
+<p>In Arc mode, two interaction intervals are connected by arcs, Users can obtain the interaction value of two interacting genome intervals by hovering the line.
+<img alt="HIC" src="/pictures/5_8.1.png" /></p>
+<h3 id="longrange-and-biginteract">Longrange and biginteract</h3>
+<p>The longrange track is a bed format-like file type. It mainly consists of 4-6 columns, of which the first 4 columns are required and the last two columns are optional. From left to right are <b><font color=#3A5FCD>chromosome</font></b>, <b><font color=#3A5FCD>start position</font></b>(0-based), <b><font color=#3A5FCD>end position</font></b>(not included), <b><font color=#3A5FCD>ineraction target</font></b>, <b><font color=#3A5FCD>ID</font></b>(optional) and <b><font color=#3A5FCD>interaction direction</font></b>(optional). The target field mainly contains information such as the position of the target interaction interval and the interaction value. As an example, interval <b><font color=#3A5FCD>"chr1:840086-840670"</font></b> interacts with interval <b><font color=#3A5FCD>"chr1:873317-874094"</font></b> on a score of 2.</p>
+<pre><code class="language-R">chr1    840086  840670  chr1:873317-874094,2    7837    +
+chr1    856372  857075  chr1:873472-874198,2    7839    +
+chr1    873317  874094  chr1:840086-840670,2    7838    -
+chr1    873472  874198  chr1:856372-857075,2    7840    -
+chr1    950622  951436  chr1:998665-999659,3    7841    +
+chr1    974252  975234  chr11:518876-519376,2   71      .
+chr1    974252  975234  chr11:518876-519376,2   69      .
+chr1    998665  999659  chr1:950622-951436,3    7842    -
+chr1    1056750 1057253 chr1:1165823-1166794,2  7843    +
+chr1    1056981 1057755 chr1:1185448-1186693,3  7845    +
+</code></pre>
+<p>The interact format is available as a standalone plain text bed5+13 format. Biginteract is a binary indexed interact format. This format is useful for displaying functional element interactions such as SNP/gene interactions, and is also suitable for low-density chromatin interactions, such as ChIA-PET. For more details about this format, please check the <a href="https://genome.ucsc.edu/goldenPath/help/interact.html" target="_blank">UCSC biginteract format</a> page.</p>
+<p>SGS genome browser provides Arc mode, double mode and circle mode to display long-distance interaction.</p>
+<h4 id="arc-mode_1">Arc mode</h4>
+<p>Arc mainly shows the interaction of the same chromosome through arcs.
+<img alt="Arc mode" src="/pictures/5_9.png" /></p>
+<h4 id="double-mode">Double mode</h4>
+<p>The double-layer mode is mainly viewed in the compare mode, which forms an interaction block through the interaction interval between the upper and lower chromosomes. The strength of the interaction through the intensity of the color. Users can zoom in/out the region by hovering the mouse wheel on a chromosome or switch the interaction range by drag left/right.
+<img alt="Double mode" src="/pictures/5_9.1.png" /></p>
+<h4 id="cirlce-mode">Cirlce mode</h4>
+<p>Users can click the circle view button in the track settings to enter the circle display mode, which mainly displays the interaction connection between the currently viewed chromosome and other chromosomes. Users can check their interactions by selecting the corresponding chromosomes.
+<img alt="Cirlce mode" src="/pictures/5_9.2.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../user_interface/" class="btn btn-neutral float-left" title="User Intserface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Viewing_singlecell/" class="btn btn-neutral float-right" title="Viewing single cell data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../user_interface/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Viewing_singlecell/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

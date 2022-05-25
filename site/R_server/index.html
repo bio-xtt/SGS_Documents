@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Guide of R server - SGS Documents</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Guide of R server";
+        var mkdocs_page_input_path = "R_server.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/R.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SGS Documents
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../home/">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and deploy</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Documents</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../qucik_start/">Quickstart guides</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User guide</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../user_interface/">User Intserface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Viewing_NGS/">Viewing NGS data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Viewing_singlecell/">Viewing single cell data</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Guide of R server</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#rstudio-server">Rstudio Server</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-formats-supports">Data formats supports</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#export-single-cell-data">Export single-cell data</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#installation-sgsload-package">Installation sgsload Package</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-of-sgsload">Usage of sgsload</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../demos/">Demos</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SGS Documents</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Documents &raquo;</li>
+          <li>User guide &raquo;</li><li>Guide of R server</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="interactive-single-cell-data-analysis-and-visualization">Interactive single cell data analysis and visualization</h1>
+<h2 id="rstudio-server">Rstudio Server</h2>
+<p>In order to provide a comprehensive visual exploration of single-cell data, the SGS browser integrates the online Rstduio Server. By clicking the <img alt="Rstudio Server" src="/pictures/4_18.1.png" /> button, users can enter the analysis environment and perform corresponding single-cell data analysis.
+<img alt="Rstudio Server" src="/pictures/4_18.2.png" /></p>
+<h2 id="data-formats-supports">Data formats supports</h2>
+<p>Currently SGS supports the following mainstream single-cell data analysis formats. Note that all objects must contain at least one expression matrix, grouping information and reduction coordinate file.</p>
+<ul>
+<li><b><font color=#3A5FCD>Seurat object</font></b></li>
+<li><b><font color=#3A5FCD>Loom object</font></b></li>
+<li><b><font color=#3A5FCD>Signac object</font></b></li>
+<li><b><font color=#3A5FCD>ArchR object</font></b></li>
+</ul>
+<h2 id="export-single-cell-data">Export single-cell data</h2>
+<h3 id="installation-sgsload-package">Installation sgsload Package</h3>
+<p>In order to realize the joint exploration of data analysis and visualization, we developed a sgsload R package to directly import the single-cell analysis objects generated by the Rstudio server analysis environment.</p>
+<pre><code class="language-R"># download package
+# install from github
+devtools::install_github(&quot;bio-xtt/sgsload&quot;) 
+
+# install from source
+install.packages(&quot;/home/bio-xtt/Desktop/sgsload_0.1.0.tar.gz&quot;, type=source)
+</code></pre>
+<h3 id="usage-of-sgsload">Usage of sgsload</h3>
+<h4 id="getting-specices-id">Getting specices id</h4>
+<p>Note that before importing single-cell analysis objects directly into the SGS single-cell browser, you need to add a species fasta file and view the id of the species.</p>
+<pre><code class="language-R"># load the package
+library(sgsload)
+
+# get the speices id information, the default userid is &quot;user001&quot;.
+get_species_inform(user_id)
+</code></pre>
+<h4 id="example1-loadding-seurat-object-into-sgs-cellbrowser">Example1: Loadding Seurat object into SGS cellbrowser</h4>
+<p>Loadding a scRNA object created by Seurat into SGS cellbrowser.</p>
+<pre><code class="language-R"># load the example datasets: pbmc_small
+data(&quot;pbmc_small&quot;)
+
+# load the example marker genes: marker.tsv
+marker_file &lt;- system.file(&quot;extdata/scRNA&quot;, &quot;markers.tsv&quot;, package = &quot;sgsload&quot;)
+
+# use the export function
+result_json &lt;- ExportSC(
+  object = pbmc_small,
+  species_id = &quot;25542c58734641fe98ba9f6b51d17a20&quot;,
+  track_name = &quot;pbmc_small&quot;,
+  track_type = &quot;scRNA&quot;,
+  select_group = c(&quot;groups&quot;, &quot;RNA_snn_res.0.8&quot;, &quot;letter.idents&quot;, &quot;cluster&quot;),
+  assays = &quot;RNA&quot;,
+  matrix.slot = list(&quot;RNA&quot; = &quot;data&quot;),
+  assay.type = list(&quot;RNA&quot; = &quot;gene&quot;),
+  reductions = c(&quot;tsne&quot;, &quot;umap&quot;),
+  marker.files = list(&quot;RNA&quot; = marker_file))
+</code></pre>
+<h4 id="example2-loadding-signac-object-into-sgs-cellbrowser">Example2: Loadding Signac object into SGS cellbrowser</h4>
+<p>Loadding a scATAC object created by Signac into SGS cellbrowser.</p>
+<pre><code class="language-R"># load the package
+library(sgsload)
+
+# get the speices id information
+get_species_inform(user_id)
+
+# load the example datasets: pbmc_small
+data(&quot;atac&quot;)
+
+# load the example marker files created by different assay: marker_gene.tsv、marker_motif.tsv、marker_peak.tsv
+marker_genes &lt;- system.file(&quot;extdata/scATAC&quot;, &quot;marker_genes.tsv&quot;, package = &quot;sgsload&quot;)
+marker_motifs &lt;- system.file(&quot;extdata/scATAC&quot;, &quot;marker_motif.tsv&quot;, package = &quot;sgsload&quot;)
+marker_peaks &lt;- system.file(&quot;extdata/scATAC&quot;, &quot;marker_peaks.tsv&quot;, package = &quot;sgsload&quot;)
+
+# create a marker file list and name the list with the correlated assay name
+markers &lt;- list(marker_genes, marker_motifs, marker_peaks)
+names(markers) &lt;- c(&quot;RNA&quot;, &quot;chromvar&quot;, &quot;peaks&quot;)
+
+# if you changed the fragments file path, you should update the fragments file path sorted in the signac object
+new.path &lt;- system.file(&quot;extdata/scATAC&quot;, &quot;fragments.tsv.gz&quot;, package = &quot;sgsload&quot;)
+fragments &lt;- CreateFragmentObject(
+  path = new.path,
+  cells = colnames(atac),
+  validate.fragments = TRUE )
+Fragments(atac) &lt;- NULL
+Fragments(atac) &lt;- fragments
+
+# use the export function to loadding the scATAC object into SGS cellbrowser
+result_json2 &lt;- ExportSC(
+  object = atac,
+  species_id = &quot;25542c58734641fe98ba9f6b51d17a20&quot;,
+  track_name = &quot;atac_demo&quot;,
+  track_type = &quot;scATAC&quot;,
+  select_group = c(&quot;seurat_clusters&quot;),
+  assays = c(&quot;RNA&quot;, &quot;chromvar&quot;, &quot;peaks&quot;),
+  matrix.slot = list(&quot;RNA&quot; = &quot;data&quot;, &quot;chromvar&quot; = &quot;data&quot;, &quot;peaks&quot; = &quot;data&quot;),
+  assay.type = list(&quot;RNA&quot; = &quot;gene&quot;, &quot;chromvar&quot; = &quot;motif&quot;, &quot;peaks&quot; = &quot;peak&quot;),
+  reductions = &quot;umap&quot;,
+  marker.files = markers)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Viewing_singlecell/" class="btn btn-neutral float-left" title="Viewing single cell data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demos/" class="btn btn-neutral float-right" title="Demos">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Viewing_singlecell/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demos/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

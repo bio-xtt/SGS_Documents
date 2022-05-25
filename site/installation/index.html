@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Installation and deploy - SGS Documents</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation and deploy";
+        var mkdocs_page_input_path = "installation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/R.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SGS Documents
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../home/">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Installation and deploy</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation-on-linux-or-macos">Installation on linux or MacOS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deploy-new-sgs-server">Deploy new SGS server</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#first-stepclicking-the-one-click-deploy-button">First step:clicking the one-click deploy button</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#second-stepfilling-relevant-information">Second step:Filling relevant information.</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#deploy-on-this-computer">Deploy on this computer</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#deploy-on-remote-computer">Deploy on remote computer</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#finish-sgs-deploy">Finish SGS deploy</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Documents</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../qucik_start/">Quickstart guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">User guide</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../user_interface/">User Intserface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Viewing_NGS/">Viewing NGS data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Viewing_singlecell/">Viewing single cell data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../R_server/">Guide of R server</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../demos/">Demos</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SGS Documents</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Installation and deploy</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation-and-deploy">Installation and deploy</h1>
+<p>SGS is build with docker technology, which consists of SGS client and server. SGS browser client supports MacOS, Linux and windows systems. SGS browser server can only be deployed on Liunx or MacOS systems.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Liunx, Windows or MacOS systems</li>
+<li>Docker </li>
+</ul>
+<h2 id="installation-on-linux-or-macos">Installation on linux or MacOS</h2>
+<pre><code class="language-shell"># download packages
+wget &quot;https://xxxxx/xxx.tar.gz&quot;
+gunzip xxx.tar.gz
+./flutter_smart_genome
+</code></pre>
+<h2 id="deploy-new-sgs-server">Deploy new SGS server</h2>
+<p>SGS browser is mainly composed of two parts:SGS server and SGS client. After downloading and installing the SGS client, we also need to deploy SGS server for data visuliation. Here，we have developed a one-click deployment function that simplifies the installation steps, allowing users to quickly deploy their own native SGS services.</p>
+<p>Note that only Linux or MacOS supports this function.</p>
+<h3 id="first-stepclicking-the-one-click-deploy-button">First step:clicking the one-click deploy button</h3>
+<p>We need to open the SGS browser client and click the one-click deploy button, then we can choose this computer or remote computer to install SGS service:
+<img alt="one-click" src="/pictures/3_1.png" /></p>
+<h3 id="second-stepfilling-relevant-information">Second step:Filling relevant information.</h3>
+<p>We need to provide server ip address, port, username, password information for SGS server installation. Then, entering the deployment interface and filling the root password again. </p>
+<h4 id="deploy-on-this-computer">Deploy on this computer</h4>
+<p>Deploy on this computer only need to offer root password.
+<img alt="one-click" src="/pictures/3_2.png" /></p>
+<h4 id="deploy-on-remote-computer">Deploy on remote computer</h4>
+<ul>
+<li>IP: the server IP address, we can view it by "ifconfig -a" command.</li>
+<li>username: the name of user</li>
+<li>password: the password of the server
+<img alt="one-click" src="/pictures/3_3.png" /></li>
+</ul>
+<h3 id="finish-sgs-deploy">Finish SGS deploy</h3>
+<p>After installation, we can see the web server, R server and local server.
+<img alt="one-click" src="/pictures/3_4.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../home/" class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../qucik_start/" class="btn btn-neutral float-right" title="Quickstart guides">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../home/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../qucik_start/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

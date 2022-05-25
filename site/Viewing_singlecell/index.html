@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Viewing single cell data - SGS Documents</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Viewing single cell data";
+        var mkdocs_page_input_path = "Viewing_singlecell.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/R.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SGS Documents
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../home/">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and deploy</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Documents</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../qucik_start/">Quickstart guides</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User guide</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../user_interface/">User Intserface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Viewing_NGS/">Viewing NGS data</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Viewing single cell data</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#cell-embeddings">Cell embeddings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#marker-feature-visualization">Marker feature visualization</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#display-of-marker-gene">Display of marker gene</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#display-of-marker-peak">Display of marker peak</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#display-of-marker-motif">Display of marker motif</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scrnaseq-track-visualization">scRNAseq track visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scatacseq-track-visualization">scATACseq track visualization</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../R_server/">Guide of R server</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../demos/">Demos</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SGS Documents</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Documents &raquo;</li>
+          <li>User guide &raquo;</li><li>Viewing single cell data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="view-single-cell-data">View single cell data</h1>
+<h2 id="cell-embeddings">Cell embeddings</h2>
+<p>The center of single cell browser mainly displays the embedding with annotation, where each cell is a point. Different reduction methods, such as UMAP, tSNE or some other dimensionality, produce different cell clustering distributions.
+<img alt="cell embeddings" src="/pictures/6_1.png" /></p>
+<h2 id="marker-feature-visualization">Marker feature visualization</h2>
+<p>SGS Genome Browser provides multiple ways to display marker features such as marker gene, marker motif, marker peak. </p>
+<h3 id="display-of-marker-gene">Display of marker gene</h3>
+<p>In SGS single cell browser, users can explore single or multi marker genes through scatter plot, violin plot, boxplot or heatmap display methods.</p>
+<p>The scatter plot of the marker gene mainly show the expression distribution of this gene in different cell clusters.
+<img alt="cell embeddings" src="/pictures/6_2.png" /></p>
+<p>Violin plot or boxplot mainly shows the statistical distribution of the expression value of the marker gene in each cluster.
+<img alt="Violin plot/boxplot" src="/pictures/6_3.png" /></p>
+<p>The heatmap shows the expression distribution of multiple marker genes in different cell groups. The cell group annotations and expression legends are displayed on the top and side of the heatmap, respectively.
+<img alt="heatmap" src="/pictures/6_4.png" /></p>
+<h3 id="display-of-marker-peak">Display of marker peak</h3>
+<p>In addition to the display of marker genes, SGS genome browser visualizes the distribution of chromatin accessibility signals near the marker peaks of interest. By displaying the chromatin accessibility peaks of multiple marker peaks at the same time, it is convenient for users to perform comparative analysis.
+<img alt="marker peak" src="/pictures/6_5.png" /></p>
+<h3 id="display-of-marker-motif">Display of marker motif</h3>
+<p>For the marker motif, in addition to providing conventional displays such as scatter plots, violin plots etc. SGS genome browser also draws the motif logo.
+<img alt="marker motif" src="/pictures/6_6.png" /></p>
+<h2 id="scrnaseq-track-visualization">scRNAseq track visualization</h2>
+<p>In order to facilitate users to view the structure of the marker gene of interest and obtain the expression of the gene in different cell groups, SGS genome browser displays the median expression of the gene in each cell groups through bar graphs at the location of a gene. Each bar represents a cell or tissue type. The height of the bar graph on the genome is the median expression level. Users can gain the expression scatter plot in the single cell browser by click on the gene bar track in the genome browser.
+<img alt="scRNAseq" src="/pictures/6_7.png" /></p>
+<h2 id="scatacseq-track-visualization">scATACseq track visualization</h2>
+<p>For single-cell atac data, the SGS browser mainly displays the following three pieces of information:
+(1) Distribution of chromatin accessibility in different cell groups; (2) Marker peaks obtained by analysis; (3) Correlation lines of peak-peak/peak-gene obtained by co-accessibility analysis. 
+<img alt="scATAC" src="/pictures/6_8.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Viewing_NGS/" class="btn btn-neutral float-left" title="Viewing NGS data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../R_server/" class="btn btn-neutral float-right" title="Guide of R server">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Viewing_NGS/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../R_server/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

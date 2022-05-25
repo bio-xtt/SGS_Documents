@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Quickstart guides - SGS Documents</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Quickstart guides";
+        var mkdocs_page_input_path = "qucik_start.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/R.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SGS Documents
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../home/">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and deploy</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Documents</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Quickstart guides</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installation-of-sgs">Installation of SGS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deploy-new-sgs-server">Deploy new SGS server</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#first-stepclicking-the-one-click-deploy-button">First step:clicking the one-click deploy button</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#second-stepfilling-relevant-information">Second step:Filling relevant information.</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#deploy-on-this-computer">Deploy on this computer</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#deploy-on-remote-computer">Deploy on remote computer</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#finish-sgs-deploy">Finish SGS deploy</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adding-species">Adding species</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adding-tracks">Adding tracks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adding-data-from-rstudio-server">Adding data from Rstudio server</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#installation-sgsload-package">Installation sgsload Package</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getting-specices-id">Getting specices id</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#loadding-seurat-object-into-sgs-cellbrowser">Loadding Seurat object into SGS cellbrowser</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#loadding-signac-object-into-sgs-cellbrowser">Loadding Signac object into SGS cellbrowser</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">User guide</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../user_interface/">User Intserface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Viewing_NGS/">Viewing NGS data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Viewing_singlecell/">Viewing single cell data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../R_server/">Guide of R server</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../demos/">Demos</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SGS Documents</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Documents &raquo;</li><li>Quickstart guides</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="quick-start-for-sgs-genome-browser">Quick start for SGS genome browser</h1>
+<h2 id="installation-of-sgs">Installation of SGS</h2>
+<pre><code class="language-shell"># download packages
+wget &quot;https://xxxxx/xxx.tar.gz&quot;
+gunzip xxx.tar.gz
+./flutter_smart_genome
+</code></pre>
+<h2 id="deploy-new-sgs-server">Deploy new SGS server</h2>
+<p>SGS browser is mainly composed of two parts:SGS server and SGS client. After downloading and installing the SGS client, we also need to deploy SGS server for data visuliation. Here，we have developed a one-click deployment function that simplifies the installation steps, allowing users to quickly deploy their own native SGS services.</p>
+<p>Note that only Linux or MacOS supports this function.</p>
+<h3 id="first-stepclicking-the-one-click-deploy-button">First step:clicking the one-click deploy button</h3>
+<p>We need to open the SGS browser client and click the one-click deploy button, then we can choose this computer or remote computer to install SGS service:
+<img alt="one-click" src="/pictures/3_1.png" /></p>
+<h3 id="second-stepfilling-relevant-information">Second step:Filling relevant information.</h3>
+<p>We need to provide server ip address, port, username, password information for SGS server installation. Then, entering the deployment interface and filling the root password again. </p>
+<h4 id="deploy-on-this-computer">Deploy on this computer</h4>
+<p>Deploy on this computer only need to offer root password.
+<img alt="one-click" src="/pictures/3_2.png" /></p>
+<h4 id="deploy-on-remote-computer">Deploy on remote computer</h4>
+<ul>
+<li>IP: the server IP address, we can view it by "ifconfig -a" command.</li>
+<li>username: the name of user</li>
+<li>password: the password of the server
+<img alt="one-click" src="/pictures/3_3.png" /></li>
+</ul>
+<h3 id="finish-sgs-deploy">Finish SGS deploy</h3>
+<p>After installation, we can see the web server, R server and local server.
+<img alt="one-click" src="/pictures/3_4.png" /></p>
+<h2 id="adding-species">Adding species</h2>
+<p>To add a new species, you need to click the "add species" botton. Then, You should fill in the corresponding species name and description information, and choose a fasta file in the data dir.
+<img alt="Adding species" src="/pictures/4_6.png" /></p>
+<h2 id="adding-tracks">Adding tracks</h2>
+<p>SGS support three types of tracks, namely Genome、Transcript(single cell transcipt) and ATAC(single cell atac). To add tracks, you first need to choose track types, then load files. Users can add single file or multi files at the same time.
+<img alt="Adding tracks" src="/pictures/4_7.png" /></p>
+<h2 id="adding-data-from-rstudio-server">Adding data from Rstudio server</h2>
+<h3 id="installation-sgsload-package">Installation sgsload Package</h3>
+<p>In order to realize the joint exploration of data analysis and visualization, we developed a sgsload R package to directly import the single-cell analysis objects generated by the Rstudio server analysis environment.</p>
+<pre><code class="language-R"># download package
+# install from github
+devtools::install_github(&quot;bio-xtt/sgsload&quot;) 
+
+# install from source
+install.packages(&quot;/home/bio-xtt/Desktop/sgsload_0.1.0.tar.gz&quot;, type=source)
+</code></pre>
+<h3 id="getting-specices-id">Getting specices id</h3>
+<p>Note that before importing single-cell analysis objects directly into the SGS single-cell browser, you need to add a species fasta file and view the id of the species.</p>
+<pre><code class="language-R"># load the package
+library(sgsload)
+
+# get the speices id information, the default userid is &quot;user001&quot;.
+get_species_inform(user_id)
+</code></pre>
+<h3 id="loadding-seurat-object-into-sgs-cellbrowser">Loadding Seurat object into SGS cellbrowser</h3>
+<p>Loadding a scRNA object created by Seurat into SGS cellbrowser.</p>
+<pre><code class="language-R"># load the example datasets: pbmc_small
+data(&quot;pbmc_small&quot;)
+
+# load the example marker genes: marker.tsv
+marker_file &lt;- system.file(&quot;extdata/scRNA&quot;, &quot;markers.tsv&quot;, package = &quot;sgsload&quot;)
+
+# use the export function
+result_json &lt;- ExportSC(
+  object = pbmc_small,
+  species_id = &quot;25542c58734641fe98ba9f6b51d17a20&quot;,
+  track_name = &quot;pbmc_small&quot;,
+  track_type = &quot;scRNA&quot;,
+  select_group = c(&quot;groups&quot;, &quot;RNA_snn_res.0.8&quot;, &quot;letter.idents&quot;, &quot;cluster&quot;),
+  assays = &quot;RNA&quot;,
+  matrix.slot = list(&quot;RNA&quot; = &quot;data&quot;),
+  assay.type = list(&quot;RNA&quot; = &quot;gene&quot;),
+  reductions = c(&quot;tsne&quot;, &quot;umap&quot;),
+  marker.files = list(&quot;RNA&quot; = marker_file))
+</code></pre>
+<h3 id="loadding-signac-object-into-sgs-cellbrowser">Loadding Signac object into SGS cellbrowser</h3>
+<p>Loadding a scATAC object created by Signac into SGS cellbrowser.</p>
+<pre><code class="language-R"># load the package
+library(sgsload)
+
+# get the speices id information
+get_species_inform(user_id)
+
+# load the example datasets: pbmc_small
+data(&quot;atac&quot;)
+
+# load the example marker files created by different assay: marker_gene.tsv、marker_motif.tsv、marker_peak.tsv
+marker_genes &lt;- system.file(&quot;extdata/scATAC&quot;, &quot;marker_genes.tsv&quot;, package = &quot;sgsload&quot;)
+marker_motifs &lt;- system.file(&quot;extdata/scATAC&quot;, &quot;marker_motif.tsv&quot;, package = &quot;sgsload&quot;)
+marker_peaks &lt;- system.file(&quot;extdata/scATAC&quot;, &quot;marker_peaks.tsv&quot;, package = &quot;sgsload&quot;)
+
+# create a marker file list and name the list with the correlated assay name
+markers &lt;- list(marker_genes, marker_motifs, marker_peaks)
+names(markers) &lt;- c(&quot;RNA&quot;, &quot;chromvar&quot;, &quot;peaks&quot;)
+
+# if you changed the fragments file path, you should update the fragments file path sorted in the signac object
+new.path &lt;- system.file(&quot;extdata/scATAC&quot;, &quot;fragments.tsv.gz&quot;, package = &quot;sgsload&quot;)
+fragments &lt;- CreateFragmentObject(
+  path = new.path,
+  cells = colnames(atac),
+  validate.fragments = TRUE )
+Fragments(atac) &lt;- NULL
+Fragments(atac) &lt;- fragments
+
+# use the export function to loadding the scATAC object into SGS cellbrowser
+result_json2 &lt;- ExportSC(
+  object = atac,
+  species_id = &quot;25542c58734641fe98ba9f6b51d17a20&quot;,
+  track_name = &quot;atac_demo&quot;,
+  track_type = &quot;scATAC&quot;,
+  select_group = c(&quot;seurat_clusters&quot;),
+  assays = c(&quot;RNA&quot;, &quot;chromvar&quot;, &quot;peaks&quot;),
+  matrix.slot = list(&quot;RNA&quot; = &quot;data&quot;, &quot;chromvar&quot; = &quot;data&quot;, &quot;peaks&quot; = &quot;data&quot;),
+  assay.type = list(&quot;RNA&quot; = &quot;gene&quot;, &quot;chromvar&quot; = &quot;motif&quot;, &quot;peaks&quot; = &quot;peak&quot;),
+  reductions = &quot;umap&quot;,
+  marker.files = markers)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../installation/" class="btn btn-neutral float-left" title="Installation and deploy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../user_interface/" class="btn btn-neutral float-right" title="User Intserface">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../user_interface/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
