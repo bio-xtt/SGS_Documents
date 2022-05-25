@@ -1,0 +1,23 @@
+site_name: SGS Documents
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+        - python
+        - R
+nav:
+    - Home: home.md
+    - Installation and deploy: installation.md
+    - Documents: 
+        - Quickstart guides: qucik_start.md
+        - User guide:
+            - User Intserface: user_interface.md
+            - Viewing NGS data: Viewing_NGS.md
+            - Viewing single cell data: Viewing_singlecell.md
+            - Guide of R server: R_server.md
+    - Demos: demos.md
+extra_css:
+    - css/extra.css
+
